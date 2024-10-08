@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 11:28:29 by mring             #+#    #+#             */
-/*   Updated: 2024/10/08 13:55:13 by mring            ###   ########.fr       */
+/*   Created: 2024/10/08 13:33:28 by mring             #+#    #+#             */
+/*   Updated: 2024/10/08 13:33:39 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-int ft_isalpha(int alpha)
+int ft_isascii(int ascii)
 {
-	if (alpha >= 'a' && alpha <= 'z')
-		return (2);
-	return (alpha >= 'A' && alpha <= 'Z');
+	if (ascii >= 0 && ascii <= 127)
+		return (1);
+	else
+		return (0);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	printf("%d", ft_isalpha('1'));
-// }
