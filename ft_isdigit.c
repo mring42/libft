@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:33:28 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 10:20:50 by mring            ###   ########.fr       */
+/*   Created: 2024/10/08 15:41:53 by mring             #+#    #+#             */
+/*   Updated: 2024/10/09 10:22:58 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int ascii)
+int ft_isdigit(int digit)
 {
-	if (ascii >= 0 && ascii <= 127)
+	if (digit >= '0' && digit <= '9')
 		return (1);
 	return (0);
 }
 
-// checks if the passed value is ASCII.
-// DESCRIPTION
-//      The isascii() function tests for an ASCII character, which is any character between 0 and octal 0177 inclusive.
+//checks if the passed value is a digit
 
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char c = -42;
-// 	printf("%d\n", ft_isascii(c));
+// 	printf("Number: %d\n", ft_isdigit('1'));
+// 	printf("Char:   %d\n", ft_isdigit('A'));
 // }

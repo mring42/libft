@@ -6,11 +6,11 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:28:29 by mring             #+#    #+#             */
-/*   Updated: 2024/10/08 13:55:13 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/09 10:33:55 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "libft.h"
 
 int ft_isalpha(int alpha)
 {
@@ -19,8 +19,12 @@ int ft_isalpha(int alpha)
 	return (alpha >= 'A' && alpha <= 'Z');
 }
 
+//checks if a character is alpha
+
 // #include <stdio.h>
-// int main()
+// int	main(void)
 // {
-// 	printf("%d", ft_isalpha('1'));
+// 	printf("Smol: %d\n", ft_isalpha('a'));
+// 	printf("Beeg: %d\n", ft_isalpha('A'));
+// 	printf("Nooo: %d\n", ft_isalpha('3'));
 // }

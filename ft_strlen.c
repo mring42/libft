@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:33:28 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 10:20:50 by mring            ###   ########.fr       */
+/*   Created: 2024/10/08 16:11:04 by mring             #+#    #+#             */
+/*   Updated: 2024/10/09 10:02:44 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int ascii)
+int ft_strlen(const char *str)
 {
-	if (ascii >= 0 && ascii <= 127)
-		return (1);
-	return (0);
+	int count;
+	
+	count = 0;
+	while(str[count])
+		count++;
+	return (count);
 }
 
-// checks if the passed value is ASCII.
-// DESCRIPTION
-//      The isascii() function tests for an ASCII character, which is any character between 0 and octal 0177 inclusive.
+// Counts the length of the string excluding \0
 
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char c = -42;
-// 	printf("%d\n", ft_isascii(c));
+// 	char str[] = "four";
+// 	printf("%d\n", ft_strlen(str));
 // }

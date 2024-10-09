@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:33:28 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 10:20:50 by mring            ###   ########.fr       */
+/*   Created: 2024/10/08 15:39:39 by mring             #+#    #+#             */
+/*   Updated: 2024/10/09 10:29:08 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int ascii)
+int ft_isalnum(int alnum)
 {
-	if (ascii >= 0 && ascii <= 127)
+	if ((alnum >= '0' && alnum <= '9') || alnum >= 'A' && alnum <= 'Z' || alnum >= 'a' && alnum <= 'z')
 		return (1);
 	return (0);
 }
 
-// checks if the passed value is ASCII.
-// DESCRIPTION
-//      The isascii() function tests for an ASCII character, which is any character between 0 and octal 0177 inclusive.
+//checks if the passed value is alpha numeric
 
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char c = -42;
-// 	printf("%d\n", ft_isascii(c));
+// 	printf("A: %d\n", ft_isalnum('A'));
+// 	printf("1: %d\n", ft_isalnum('1'));
+// 	printf("@: %d\n", ft_isalnum('@'));
 // }
