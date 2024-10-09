@@ -6,18 +6,18 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:11:04 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 10:02:44 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/09 15:29:28 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-	int count;
-	
+	int	count;
+
 	count = 0;
-	while(str[count])
+	while (str[count])
 		count++;
 	return (count);
 }

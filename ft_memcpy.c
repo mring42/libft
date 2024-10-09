@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 15:39:39 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 16:03:38 by mring            ###   ########.fr       */
+/*   Created: 2024/10/09 11:37:55 by mring             #+#    #+#             */
+/*   Updated: 2024/10/09 16:13:32 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int alnum)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if ((alnum >= '0' && alnum <= '9') || (alnum >= 'A' && alnum <= 'Z')
-		|| (alnum >= 'a' && alnum <= 'z'))
-		return (1);
-	return (0);
+	size_t				count;
+	unsigned char		*temp_dst;
+	const unsigned char	*temp_src;
+
+	temp_dst = dst;
+	temp_src = src;
+	count = 0;
+	if (!dst && !src)
+		return (dst);
+	while (count < n)
+	{
+		temp_dst[count] = temp_src[count];
+		count++;
+	}
+	return (dst);
 }
 
-// checks if the passed value is alpha numeric
+//
 
-// #include <stdio.h>
 // int	main(void)
 // {
-// 	printf("A: %d\n", ft_isalnum('A'));
-// 	printf("1: %d\n", ft_isalnum('1'));
-// 	printf("@: %d\n", ft_isalnum('@'));
+// 	char src[] = "bruh idk man";
+// 	char dst[] = "lets see it!";
+// 	ft_memcpy(dst, src, 10);
+// 	printf("%s\n", dst);
 // }

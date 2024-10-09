@@ -6,20 +6,21 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:45:48 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 10:27:16 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/09 15:31:08 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int print)
+int	ft_isprint(int print)
 {
 	if (print >= 32 && print <= 126)
 		return (1);
 	return (0);
 }
 
-//checks if the passed value is a printable character (between 32 and 126 ascii table)
+//checks if the passed value is a printable character
+//(between 32 and 126 ascii table)
 
 // #include <stdio.h>
 // int	main(void)

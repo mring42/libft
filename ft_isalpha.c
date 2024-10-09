@@ -6,20 +6,20 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:28:29 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 10:33:55 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/09 15:29:04 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int alpha)
+int	ft_isalpha(int alpha)
 {
 	if (alpha >= 'a' && alpha <= 'z')
 		return (2);
 	return (alpha >= 'A' && alpha <= 'Z');
 }
 
-//checks if a character is alpha
+// checks if a character is alpha
 
 // #include <stdio.h>
 // int	main(void)
