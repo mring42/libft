@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 10:37:46 by mring             #+#    #+#             */
-/*   Updated: 2024/10/10 14:14:25 by mring            ###   ########.fr       */
+/*   Created: 2024/10/10 12:30:29 by mring             #+#    #+#             */
+/*   Updated: 2024/10/10 14:44:06 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	i;
+	size_t	dst_len;
 	size_t	src_len;
 
+	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if (dstsize > src_len + 1)
-		ft_memcpy(dst, src, src_len + 1);
-	else if (dstsize)
+	if (dst_len >= dstsize)
+		return (dstsize + src_len);
+	i = 0;
+	while (src[i] != '\0' && dst_len + i < dstsize - 1)
 	{
-		ft_memcpy(dst, src, dstsize - 1);
-		dst[dstsize - 1] = 0;
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	return (src_len);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
 
 // int main(void)
 // {
-// 	char str[] = "random string";
-// 	char str2[15];
-// 	printf("str1: %s\nstr2: %s\n", str, str2);
-// 	ft_strlcpy(str2, str, 9);
-// 	printf("str1: %s\nstr2: %s\n", str, str2);
+// 	char	dst[50] = "hello ";
+// 	const char	*src = "world!";
+// 	printf("dst: %s\nsrc: %s\n", dst, src);
+// 	ft_strlcat(dst, src, 15);
+// 	printf("strcat: %s\n", dst);
 // }

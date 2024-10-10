@@ -1,0 +1,3 @@
+dst: hello 
+src: world!
+strcat: hello world!
