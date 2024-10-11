@@ -6,7 +6,7 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:40:34 by mring             #+#    #+#             */
-/*   Updated: 2024/10/10 15:18:22 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/11 09:02:25 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-// int		ft_strncmp(const char *str1, const char *str2, size_t n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
 // void	*ft_memchr(const void *str, int c, size_t n);
 // int		ft_memcmp(const void *str1, const void *str2, size_t n);
 // char	*ft_strnstr(const char *haystack, const char *needle, size_t length);
