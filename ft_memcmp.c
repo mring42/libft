@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 09:02:46 by mring             #+#    #+#             */
-/*   Updated: 2024/10/11 09:45:42 by mring            ###   ########.fr       */
+/*   Created: 2024/10/11 10:48:46 by mring             #+#    #+#             */
+/*   Updated: 2024/10/11 13:24:17 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t	i;
+	const unsigned char	*str1_cast;
+	const unsigned char	*str2_cast;
+	size_t				count;
 
-	i = 0;
-	while (i < n && (str1[i] || str2[i]))
+	str1_cast = (unsigned char *)str1;
+	str2_cast = (unsigned char *)str2;
+	count = 0;
+	while (count < n)
 	{
-		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
-		i++;
+		if (str1_cast[count] != str2_cast[count])
+			return (str1_cast[count] - str2_cast[count]);
+		count++;
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char s1[] = "o1";
-// 	char s2[] = "o3";
-// 	printf("%d\n", strncmp(s1, s2, 100000));
-// 	printf("%d\n", ft_strncmp(s1, s2, 100000));
-// }
