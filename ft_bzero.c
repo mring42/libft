@@ -6,7 +6,7 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:36:05 by mring             #+#    #+#             */
-/*   Updated: 2024/10/09 15:42:39 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/14 10:41:07 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,7 @@
 
 void	ft_bzero(void *s, size_t len)
 {
-	size_t			count;
-	unsigned char	*temp;
-
-	temp = s;
-	count = 0;
-	while (count < len)
-	{
-		temp[count] = 0;
-		count++;
-	}
+	ft_memset(s, '\0', len);
 }
 
 // writes n zeroed bytes to the string s. If n is zero does nothing.

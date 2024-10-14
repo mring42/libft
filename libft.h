@@ -6,7 +6,7 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:40:34 by mring             #+#    #+#             */
-/*   Updated: 2024/10/11 14:07:40 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/14 09:59:12 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t length);
 int		ft_atoi(const char *str);
-// void	*ft_calloc(size_t count, size_t size);
-// char	*ft_strdup(const char *s1);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 // char	*ft_substr(char const *s, int start, size_t len);
 // char	*ft_strjoin(char const *s1, char const *s2);
 // char	*ft_strtrim(char const *s1, char const *set);
