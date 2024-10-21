@@ -6,7 +6,7 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:37:00 by mring             #+#    #+#             */
-/*   Updated: 2024/10/21 15:20:11 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/21 15:29:32 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (s[0] == '\0')
-		return (result = ft_calloc(1, sizeof(char *)));
 	i = 0;
 	count = 0;
 	while (s[i])
