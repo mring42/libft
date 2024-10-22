@@ -6,7 +6,7 @@
 #    By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 10:34:52 by mring             #+#    #+#              #
-#    Updated: 2024/10/16 13:38:09 by mring            ###   ########.fr        #
+#    Updated: 2024/10/21 15:31:56 by mring            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ NAME = libft.a
 
 # Source file names devided by space
 SRC = $(addsuffix .c, ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint ft_strlen ft_memset ft_bzero ft_memcpy ft_memmove ft_strlcpy ft_strlcat ft_toupper ft_tolower ft_strchr ft_strrchr ft_strncmp ft_memchr ft_memcmp ft_strnstr ft_atoi ft_calloc ft_strdup \
-ft_substr ft_strjoin ft_strtrim ft_split)
+ft_substr ft_strjoin ft_strtrim ft_split ft_itoa)
 # 
-#  ft_itoa ft_strmapi ft_striteri ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd          
+#   ft_strmapi ft_striteri ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd          
 # for every source file, find the object file.
 OBJ := $(SRC:%.c=%.o)
 # bonus files and folder
