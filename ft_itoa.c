@@ -6,13 +6,13 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:24:06 by mring             #+#    #+#             */
-/*   Updated: 2024/10/22 13:31:30 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/23 12:28:39 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	digit_count(long n)
+static int	digit_count(long n)
 {
 	int	i;
 

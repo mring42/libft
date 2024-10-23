@@ -6,13 +6,13 @@
 /*   By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:37:00 by mring             #+#    #+#             */
-/*   Updated: 2024/10/21 15:29:32 by mring            ###   ########.fr       */
+/*   Updated: 2024/10/23 12:29:00 by mring            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**split_helper(char const *s, char **result, char c)
+static char	**split_helper(char const *s, char **result, char c)
 {
 	int	i;
 	int	count;
