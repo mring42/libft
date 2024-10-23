@@ -6,7 +6,7 @@
 #    By: mring <mring@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 10:34:52 by mring             #+#    #+#              #
-#    Updated: 2024/10/23 12:17:05 by mring            ###   ########.fr        #
+#    Updated: 2024/10/23 16:36:11 by mring            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ ft_substr ft_strjoin ft_strtrim ft_split ft_itoa ft_strmapi ft_striteri ft_putch
 # for every source file, find the object file.
 OBJ := $(SRC:%.c=%.o)
 # bonus files and folder
-#BONUS_SRC = $(addsuffix _bonus.c, ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back ft_lstdelone ft_lstclear ft_lstiter ft_lstmap)
+BONUS_SRC = $(addsuffix _bonus.c, ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back ft_lstdelone ft_lstclear ft_lstiter ft_lstmap)
 # for every bonus source file find the bonus object file
-#BONUS_OBJ := $(BONUS_SRC:%.c=%.o)
+BONUS_OBJ := $(BONUS_SRC:%.c=%.o)
 
 # Defining compiler and compiler flags
 CC = cc
@@ -45,15 +45,12 @@ $(NAME): $(OBJ)
 #	$(CC) $(LFLAGS) -o $(NAME)
 # used for leaksanitizer
 
-#bonus: $(BONUS_OBJ)
-#	ar -rc $(NAME) 
-#$(BONUS_OBJ)
-###############
+bonus: $(BONUS_OBJ)
+	ar -rc $(NAME) $(BONUS_OBJ)
 
 # clean removes all objects (%.o) "rm -f"
 clean:
-	rm -f $(OBJ)
-# $(BONUS_OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 # fclean runs clean first then removes the library file
 fclean: clean
